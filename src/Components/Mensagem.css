@@ -1,0 +1,29 @@
+.mensagem-certo, .mensagem-erro{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.mensagem-certo.visivel{
+    opacity: 1;
+    visibility: visible;
+
+    text-align: center;
+    color: darkgreen;
+    background-color: rgba(172, 255, 47, 0.15);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.mensagem-erro.visivel{
+    opacity: 1;
+    visibility: visible;
+
+    text-align: center;
+    color: red;
+    background-color: rgba(250, 128, 114, 0.15);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}

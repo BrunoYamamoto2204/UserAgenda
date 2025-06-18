@@ -1,0 +1,60 @@
+.formulario{
+    padding-bottom: 20px ;
+    border-radius: 10px;
+}
+.formulario h2{
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+}
+
+form input {
+    width: 75%;
+    display: block;
+    color: rgb(47, 55, 63);
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 10px 30px;
+    margin: auto;
+    box-sizing: border-box
+}
+::placeholder {
+    color: rgb(166, 179, 196);
+    font-size: medium;
+}
+form input:focus {
+    outline: none;                
+    border: none;                 
+    border-bottom: 1px solid #555; 
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+}
+.addContato{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+}
+.addContato:hover{
+    background-color: #555;
+    color: white;
+    transition: all 0.3s ease;
+}
+.limparCampos{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid gray;
+    color: gray;
+    margin-top: 20px;
+}
+.limparCampos:hover{
+    background-color: #555;
+    color: white;
+    transition: all 0.3s ease;
+}
