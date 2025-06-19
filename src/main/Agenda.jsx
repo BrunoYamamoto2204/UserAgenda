@@ -115,10 +115,32 @@ export default class Agenda extends Component {
         }
     }
 
-    limparCampos = () => {
+    limparCampos = (e) => {
+        e.preventDefault()
+
         this.setState({
             novoContato: { nome: "", telefone: "", email: "" }
         })
+    }
+
+    renderTable(contatos){
+        return (
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {contatos}
+                </tbody>
+            </table>
+        )
     }
 
     render(){
@@ -146,19 +168,21 @@ export default class Agenda extends Component {
                 <Header/>                
                 <div className="agenda">
                     <div className="agenda-content">
-                        <h1><i className="fa-solid fa-user icon-user"></i>Agenda de Contatos</h1>
-
-                        <hr />
+                        
+                        <h1>Agenda de Contatos</h1>
                         <Formulario adicionar={this.add} handleChange={this.handleChange} limparCampos={this.limparCampos}
                             novoContato={this.state.novoContato}/>
                     
                         <Mensagem tipo={"sucesso"} texto={this.state.mensagemSucesso}/>
                         <Mensagem tipo={"erro"} texto={this.state.mensagemErro}/>
                         
-                        <h2>Lista de Contatos</h2>
+                        <hr className="divisaoSecao"/>
+
+                        <h2><i className="fa-solid fa-user icon-user"></i> Contatos</h2>
                         <h3 className="quantidadeContatos">{this.state.listaContatos.length > 0 ?
                             `Total de contatos: ${this.state.listaContatos.length}` : ""}</h3>
-                        <div className="listaContatos">{contatos}</div>
+
+                        <div className="lista-contatos">{this.renderTable(contatos)}</div>
                         <div className="semContatos">{semContatos}</div>
                     </div>
                 </div>

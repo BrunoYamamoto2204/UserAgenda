@@ -3,16 +3,19 @@ import Botao from "./Botao"
 
 const Contato = props => {
     return (
-        <div className="contato">
-            <span>{props.nome}</span><hr/>
-            <span>{props.telefone}</span><hr/>
-            <span>{props.email} </span>
-            <Botao 
-                className="botao"
-                label={props.labelButton} 
-                click={() => props.onDelete(props.id)}
-            />
-        </div>
+        <tr key={props.id} className="contato"> 
+            <td>{props.id}</td>         
+            <td>{props.nome}</td>
+            <td>{props.telefone}</td>
+            <td>{props.email} </td>
+            <td>
+                <Botao
+                    className="botao"
+                    label={props.labelButton}
+                    click={() => props.onDelete(props.id)}
+                />
+            </td>
+        </tr>
     )
 }
 
