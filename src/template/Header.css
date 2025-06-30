@@ -7,13 +7,19 @@ body {
 
 .menu {
   background-color: #F1F1F1;
+  margin-bottom: 50px;
   width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.header-content{
+  width: 80%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-  margin-bottom: 50px;
+  align-items: center; 
+  margin: auto;
 }
+
 .paginas{
     display: flex;
     gap: 10px;

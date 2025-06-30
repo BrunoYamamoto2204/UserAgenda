@@ -4,13 +4,15 @@ import "./Header.css"
 const Header = props =>
     <React.Fragment>
         <header className="menu">
-            <div className="logo"><i class="fa-solid fa-calendar-days"></i> Agenda</div>
-            <nav>
-                <ul className="paginas">
-                    <li><div className="|"><a href="./">Home</a></div></li>
-                    <li><a href="./agenda">Usuários</a></li>
-                </ul>
-            </nav>
+            <div className="header-content">
+                <div className="logo"><i class="fa-solid fa-calendar-days"></i> Agenda</div>
+                <nav>
+                    <ul className="paginas">
+                        <li><div className="|"><a href="./">Home</a></div></li>
+                        <li><a href="./agenda">Usuários</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     </React.Fragment>
 

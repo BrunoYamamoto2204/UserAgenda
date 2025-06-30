@@ -11,8 +11,12 @@
 
 .formulario{
     padding: 20px;
-    background: transparent;
 }
+
+.novo-cadastro{
+    margin-bottom: 50px;
+}
+
 .novo-cadastro h2{
     margin-bottom: 0;
     font-weight: 700;
@@ -80,7 +84,7 @@ form input:focus {
 }
 .limparCampos{
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: white;
     border: 1px solid gray;
     color: gray;
@@ -92,9 +96,5 @@ form input:focus {
     transition: all 0.3s ease;
 }
 
-
-.telefone, .nome, .email {
-      /* opcional: separa das outras linhas */
-}
 
 
